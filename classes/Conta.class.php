@@ -60,9 +60,10 @@ abstract class Conta {
         if($this->Retirar($Valor)){
             $Conta->Depositar($Valor);
         }
-        
+
         if($this->Titular != $Conta->Titular){
             $this->Retirar($this->TaxaTransferencia);
         }
     }
+    
 }
